@@ -22,3 +22,5 @@ if people > trucks:
     print("Allright, lets just take the trucks")
 else:
     print("Fine, lets stay home then.")
+
+#deneme
