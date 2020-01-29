@@ -9,44 +9,44 @@ class hapagContainerTracking:
 
     def __init__(self, shippingLine, containerNumber):
         
-            print('Now looking for' + ' ' + containerNumber)
+        print('Now looking for' + ' ' + containerNumber)
 
-            self.shippingLine = shippingLine
-            self.containerNumber = containerNumber
+        self.shippingLine = shippingLine
+        self.containerNumber = containerNumber
 
-            global hapagContainerType
-            global hapagLastMovement
+        global hapagContainerType
+        global hapagLastMovement
 
-            browser = webdriver.Chrome()
-            browser.get(shippingLine)
+        browser = webdriver.Chrome()
+        browser.get(shippingLine)
 
-            # Arama alaninin bulunmasi
-            searchField = browser.find_element_by_css_selector('#tracingvalue')
-            time.sleep(7)
+        # Arama alaninin bulunmasi
+        searchField = browser.find_element_by_css_selector('#tracingvalue')
+        time.sleep(7)
 
-            # Arama alanina konteyner numarasinin yazilmasi
-            searchFieldFilled = searchField.send_keys(containerNumber)
+        # Arama alanina konteyner numarasinin yazilmasi
+        searchFieldFilled = searchField.send_keys(containerNumber)
 
-            # Trace Button basma
-            hapagButton = browser.find_element_by_css_selector(
-                'body > div.hal-page.hal-page--home.page-home > div.hal-page-body > div.hal-stagehome > div:nth-child(3) > div > div > div:nth-child(1) > div > button > span')
-            hapagButton.click()
+        # Trace Button basma
+        hapagButton = browser.find_element_by_css_selector(
+            'body > div.hal-page.hal-page--home.page-home > div.hal-page-body > div.hal-stagehome > div:nth-child(3) > div > div > div:nth-child(1) > div > button > span')
+        hapagButton.click()
 
-            # 5sn bekleme
-            time.sleep(5)
+        # 5sn bekleme
+        time.sleep(5)
 
-            # Container Type olan alanin bulunmasi
-            hapagContainerType = browser.find_element_by_css_selector(
-                '#tracing_by_container_f\:hl29 > tbody > tr > td > div > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td.inputNonEdit > span')
-            hapagLastMovement = browser.find_element_by_css_selector(
-                '#tracing_by_container_f\:hl56 > tbody > tr > td > div > table > tbody > tr > td:nth-child(1) > table > tbody > tr > td.inputNonEdit > span')
+        # Container Type olan alanin bulunmasi
+        hapagContainerType = browser.find_element_by_css_selector(
+            '#tracing_by_container_f\:hl29 > tbody > tr > td > div > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td.inputNonEdit > span')
+        hapagLastMovement = browser.find_element_by_css_selector(
+            '#tracing_by_container_f\:hl56 > tbody > tr > td > div > table > tbody > tr > td:nth-child(1) > table > tbody > tr > td.inputNonEdit > span')
 
-            # Container tipi nedir?
-            hapagContainerType = hapagContainerType.text
-            hapagLastMovement = hapagLastMovement.text
+        # Container tipi nedir?
+        hapagContainerType = hapagContainerType.text
+        hapagLastMovement = hapagLastMovement.text
 
-            print('The Type of the Container is:' + hapagContainerType)
-            print(hapagLastMovement)
+        print('The Type of the Container is:' + hapagContainerType)
+        print(hapagLastMovement)
 
 
 # Hangi shipping line kontrol edilecek?
