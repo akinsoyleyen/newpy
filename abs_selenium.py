@@ -45,6 +45,11 @@ class hapagContainerTracking:
 
         print('The Type of the Container is:' + hapagContainerType)
         print(hapagLastMovement)
+        
+        #WRITE THE ANSWER FROM HAPAGLLOYD TO A FILE!
+        containerStatusFile = open("Containers.txt", "a")
+        containerStatusFile.write(containerNumber + " " + hapagLastMovement + "\n")
+        containerStatusFile.close()
 
 
 # Hangi shipping line kontrol edilecek?
@@ -59,8 +64,7 @@ if shippingLine == "hapaglloyd":
 else:
     print('We only support HapagLloyd for now!')
 
-#!WRITE THE ANSWER FROM HAPAGLLOYD TO A FILE!
 
-containerStatusFile = open("Container.txt", "w")
-containerStatusFile.write(containerNumber + " " + hapagLastMovement)
+
+
 
