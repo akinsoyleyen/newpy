@@ -59,3 +59,5 @@ else:
 
 #!WRITE THE ANSWER FROM HAPAGLLOYD TO A FILE!
 
+containerStatusFile = open("Container.txt", "w")
+containerStatusFile.write(containerNumber + " " + hapagLastMovement)
