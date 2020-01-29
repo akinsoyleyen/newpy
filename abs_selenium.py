@@ -1,8 +1,6 @@
 from selenium import webdriver
 import time
 
-containerNumbers = ['GESU9385802', 'HLBU9369360']
-
 #!HAPAGLLOYD CLASS
 
 class hapagContainerTracking:
@@ -51,7 +49,7 @@ class hapagContainerTracking:
 
 # Hangi shipping line kontrol edilecek?
 shippingLine = input('What is the shipping line?').lower()
-
+containerNumbers = ['GESU9385802', 'HLBU9369360']
 #!THE IF STATEMENT PART OF THE PROGRAM
 if shippingLine == "hapaglloyd":
     shippingLine = 'https://www.hapag-lloyd.com/en/home.html'
@@ -66,4 +64,3 @@ else:
 containerStatusFile = open("Container.txt", "w")
 containerStatusFile.write(containerNumber + " " + hapagLastMovement)
 
-#! containerNumbers = ['GESU9385802', 'HLBU9369360']
