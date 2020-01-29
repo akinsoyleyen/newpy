@@ -1,6 +1,6 @@
 from sys import argv
 
-script, filename = argv
+filename = argv
 
 print(f"We are going to delete {filename}")
 print("If you dont want that, hit CTRL-C")
