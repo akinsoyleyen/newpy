@@ -57,8 +57,11 @@ shippingLine = input('What is the shipping line?').lower()
 containerNumbers = ['GESU9385802', 'HLBU9369360']
 #!THE IF STATEMENT PART OF THE PROGRAM
 if shippingLine == "hapaglloyd":
+
     shippingLine = 'https://www.hapag-lloyd.com/en/home.html'
+
     print("OK....Passing to the relative class")
+
     for containerNumber in containerNumbers:
         hapagContainerTracking(shippingLine, containerNumber)
 else:
