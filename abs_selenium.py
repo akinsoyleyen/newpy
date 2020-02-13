@@ -3,14 +3,13 @@ import time
 import openpyxl
 import os
 
-#!HAPAGLLOYD CLASS
 
+#open XLSX
 os.chdir('/Users/akin/onedrive/python3/documents')
 workbook = openpyxl.load_workbook('konteynerler.xlsx')
-sheet = workbook.get_sheet_by_name('Sheet1')
-cell = sheet['A1']
+sheet_1 = workbook.get_sheet_by_name('Sheet1')
 
-
+#!HAPAGLLOYD CLASS
 class hapagContainerTracking:
 
     def __init__(self, shippingLine, containerNumber):
@@ -27,6 +26,7 @@ class hapagContainerTracking:
         browser = webdriver.Chrome()
         browser.get(shippingLine)
         time.sleep(3)
+
         # Arama alaninin bulunmasi
         searchField = browser.find_element_by_css_selector('#tracingvalue')
         time.sleep(7)
@@ -55,17 +55,16 @@ class hapagContainerTracking:
         print('The Type of the Container is:' + hapagContainerType)
         print(hapagLastMovement)
         
+
         #WRITE THE ANSWER FROM HAPAGLLOYD TO A FILE!
-        containerStatusFile = open("Containers.txt", "a")
-        containerStatusFile.write(containerNumber + " " + hapagLastMovement + "\n")
-        containerStatusFile.close()
+        #containerStatusFile = open("Containers.txt", "a")
+        #containerStatusFile.write(containerNumber + " " + hapagLastMovement + "\n")
+        #containerStatusFile.close()
 
 
 
 # Hangi shipping line kontrol edilecek?
-shippingLine = input('What is the shipping line?').lower()
-
-#!THE IF STATEMENT PART OF THE PROGRAM
+shippingLine = 'hapaglloyd'
 
 if shippingLine == "hapaglloyd":
 
@@ -73,9 +72,10 @@ if shippingLine == "hapaglloyd":
 
     print("OK....Passing to the relative class")
 
-    for i in range(2, 7):
-        cell_value = sheet.cell(row=i, column=1).value
+    for i in range(2, 4):
+        cell_value = sheet_1.cell(row=i, column=1).value
         hapagContainerTracking(shippingLine, cell_value)
+
 else:
     print('We only support HapagLloyd for now!')
 
