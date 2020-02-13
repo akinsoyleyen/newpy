@@ -1,7 +1,15 @@
 from selenium import webdriver
 import time
+import openpyxl
+import os
 
 #!HAPAGLLOYD CLASS
+
+os.chdir('/Users/akin/onedrive/python3/documents')
+workbook = openpyxl.load_workbook('konteynerler.xlsx')
+sheet = workbook.get_sheet_by_name('Sheet1')
+cell = sheet['A1']
+
 
 class hapagContainerTracking:
 
@@ -14,10 +22,11 @@ class hapagContainerTracking:
 
         global hapagContainerType
         global hapagLastMovement
-
+        
+        #browser ac
         browser = webdriver.Chrome()
         browser.get(shippingLine)
-
+        time.sleep(3)
         # Arama alaninin bulunmasi
         searchField = browser.find_element_by_css_selector('#tracingvalue')
         time.sleep(7)
@@ -52,18 +61,21 @@ class hapagContainerTracking:
         containerStatusFile.close()
 
 
+
 # Hangi shipping line kontrol edilecek?
 shippingLine = input('What is the shipping line?').lower()
-containerNumbers = ['GESU9385802', 'HLBU9369360']
+
 #!THE IF STATEMENT PART OF THE PROGRAM
+
 if shippingLine == "hapaglloyd":
 
     shippingLine = 'https://www.hapag-lloyd.com/en/home.html'
 
     print("OK....Passing to the relative class")
 
-    for containerNumber in containerNumbers:
-        hapagContainerTracking(shippingLine, containerNumber)
+    for i in range(2, 7):
+        cell_value = sheet.cell(row=i, column=1).value
+        hapagContainerTracking(shippingLine, cell_value)
 else:
     print('We only support HapagLloyd for now!')
 

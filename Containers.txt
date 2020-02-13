@@ -1,2 +1,5 @@
 GESU9385802 The vessel departed from MERSIN on 2020-01-26 .GESU9385802 The vessel departed from MERSIN on 2020-01-26 .
 HLBU9369360 The vessel departed from MERSIN on 2020-01-26 .
+GESU9385802 The vessel departed from MERSIN on 2020-01-26 .
+GESU9385802 The vessel departed from MERSIN on 2020-01-26 .
+HLBU9369360 The vessel departed from MERSIN on 2020-01-26 .
