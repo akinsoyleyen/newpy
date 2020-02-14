@@ -1,9 +1,19 @@
 from selenium import webdriver
 import time
+import openpyxl
+import os
 
 #web sayfasi acilacak
 #web sayfasindaki belirli noktaya awb nosu girilecek
 #list dugmesine basilacak
+
+os.chdir('/users/akin/desktop')
+#Buraya kadar dosyaya isim vermedik ama olusturabildik...
+#Cunku suanda sadece Python icinde olustu daha kayit etmedik
+workbook = openpyxl.Workbook()
+workbook.get_sheet_names()
+sheet = workbook.get_sheet_by_name('Sheet')
+
 
 
 
@@ -25,3 +35,6 @@ last_movement = last_movement.text
 
 print(last_movement)
 
+sheet['A1'].value = last_movement
+
+workbook.save('thy_tracking.xlsx')
