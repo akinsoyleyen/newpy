@@ -18,7 +18,6 @@ sheet = workbook.get_sheet_by_name('Sheet')
 
 def thy_website_check(awb_number):
 
-    #!awb_number = '36264642'
     adress = 'https://www.turkishcargo.com.tr/en/online-services/shipment-tracking'
     browser = webdriver.Chrome()
     browser.get(adress)
