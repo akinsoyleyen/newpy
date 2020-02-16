@@ -5,15 +5,13 @@ import os
 
 # web sayfasi acilacak
 # web sayfasindaki belirli noktaya awb nosu girilecek
-# list dugmesine basilacak
-
-
+# list dugmesine basilaca
 
 for i in range(1, 3):
     os.chdir('/users/akin/desktop')
     awb_workbook = openpyxl.load_workbook('awb_numbers.xlsx')
     sheet1 = awb_workbook.get_sheet_by_name('Sheet1')
-    
+
     awb_number = sheet1.cell(row=i, column=1).value
     
     adress = 'https://www.turkishcargo.com.tr/en/online-services/shipment-tracking'
