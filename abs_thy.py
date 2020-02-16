@@ -7,18 +7,8 @@ import os
 #web sayfasindaki belirli noktaya awb nosu girilecek
 #list dugmesine basilacak
 
-os.chdir('/users/akin/desktop')
-#Buraya kadar dosyaya isim vermedik ama olusturabildik...
-#Cunku suanda sadece Python icinde olustu daha kayit etmedik
-workbook = openpyxl.Workbook()
-workbook.get_sheet_names()
-sheet = workbook.get_sheet_by_name('Sheet')
-
-
-
 def thy_website_check(awb_number):
 
-    #!awb_number = '36264642'
     adress = 'https://www.turkishcargo.com.tr/en/online-services/shipment-tracking'
     browser = webdriver.Chrome()
     browser.get(adress)
@@ -37,17 +27,19 @@ def thy_website_check(awb_number):
     print(last_movement)
 
     
-    
+    #Burasi excele yazan kisim
     for i in range(1, 3):
         os.chdir('/users/akin/desktop')
         workbook_results = openpyxl.load_workbook('thy_tracking.xlsx')
         sheet1 = workbook_results.get_sheet_by_name('Sheet')
-
-        last_movement = sheet1.cell(row=i, column=1).value
+        #last movement i al ve 2.columndan koymaya basla
+        sheet1.cell(row=i, column=2).value = last_movement
+        #AWB numarasini diger excelden alip buraya koy
+        sheet1.cell(row=i, column=1).value = cell
         
         workbook_results.save('thy_tracking.xlsx')
 
-
+#Burasi Excelden okuyan kisim AWB numaralarini aliyor ve method a yaziyor.
 os.chdir('/users/akin/desktop')
 awb_workbook = openpyxl.load_workbook('awb_numbers.xlsx')
 sheet1 = awb_workbook.get_sheet_by_name('Sheet1')
@@ -56,7 +48,3 @@ for i in range(1, 3):
     cell = sheet1.cell(row=i, column=1).value
     thy_website_check(cell)
 
-
-#sheet['A1'].value = last_movement
-
-#workbook.save('thy_tracking.xlsx')
