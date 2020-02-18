@@ -1,7 +1,5 @@
 from selenium import webdriver
 import time
-import openpyxl
-import os
 
 
 #open XLSX
@@ -72,12 +70,9 @@ if shippingLine == "hapaglloyd":
 
     print("OK....Passing to the relative class")
 
-    for i in range(2, 4):
-        cell_value = sheet_1.cell(row=i, column=1).value
-        hapagContainerTracking(shippingLine, cell_value)
-
-else:
-    print('We only support HapagLloyd for now!')
+    #for i in range(2, 4):
+    cell_value = 'HLBU9022860'
+    hapagContainerTracking(shippingLine, cell_value)
 
 
 
