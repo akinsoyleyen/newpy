@@ -5,9 +5,9 @@ import os
 
 
 #open XLSX
-os.chdir('/Users/akin/onedrive/python3/documents')
-workbook = openpyxl.load_workbook('konteynerler.xlsx')
-sheet_1 = workbook.get_sheet_by_name('Sheet1')
+#os.chdir('/Users/akin/onedrive/python3/documents')
+#workbook = openpyxl.load_workbook('konteynerler.xlsx')
+#sheet_1 = workbook.get_sheet_by_name('Sheet1')
 
 #!HAPAGLLOYD CLASS
 class hapagContainerTracking:
@@ -23,7 +23,7 @@ class hapagContainerTracking:
         global hapagLastMovement
         
         #browser ac
-        browser = webdriver.Chrome()
+        browser = webdriver.Firefox()
         browser.get(shippingLine)
         time.sleep(3)
 
