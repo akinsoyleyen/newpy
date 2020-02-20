@@ -11,3 +11,16 @@ Error: no DISPLAY environment variable specified
 1582182126638	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7xSe29"
 Unable to init server: Broadway display type not supported: localhost:0.0
 Error: cannot open display: localhost:0.0
+1582182956796	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDU6G7B"
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+1582182958664	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1582182959630	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1582182959638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1582182959638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1582182959638	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:43033): LIBDBUSMENU-GLIB-WARNING **: 07:16:01.428: Unable to get session bus: Failed to execute child process “dbus-launch” (No such file or directory)
+1582182962807	Marionette	INFO	Listening on port 35779
+1582182962816	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://hapag-lloyd7.azureedge.net/etc/designs/website/js/olb.js, line 682: unreachable code after return statement
