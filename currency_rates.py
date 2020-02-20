@@ -1,19 +1,17 @@
 from forex_python.converter import CurrencyRates   
 from forex_python.converter import CurrencyCodes
 
-def usd_to_try():
-    
-    currency = CurrencyRates()
-    currency_symbol = CurrencyCodes().get_symbol('USD')
+which_currency_from = input('FROM CURRENCY:').upper()
+which_currency_to = input('TO CURRENCY:').upper()
 
+convert_amount = input('AMOUNT:')
+convert_amount = int(convert_amount)
 
-    convert_amount = input('How much money would you like to convert?')
-    convert_amount = int(convert_amount)
+currency = CurrencyRates()
+currency_symbol = CurrencyCodes().get_symbol(which_currency_to)
 
-    usd_to_try_converter = currency.convert('USD', 'TRY', convert_amount )
+currency_converted = currency.convert(which_currency_from, which_currency_to, convert_amount )
 
-    print(currency_symbol + str(usd_to_try_converter))
-
-def usd_to_try()
+print(currency_symbol + str(currency_converted))
 
 

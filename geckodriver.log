@@ -6,3 +6,8 @@ Error: no DISPLAY environment variable specified
 Error: no DISPLAY environment variable specified
 1582033047018	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4R24zW"
 Error: no DISPLAY environment variable specified
+1582181743250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejs7tUu"
+Error: no DISPLAY environment variable specified
+1582182126638	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7xSe29"
+Unable to init server: Broadway display type not supported: localhost:0.0
+Error: cannot open display: localhost:0.0
