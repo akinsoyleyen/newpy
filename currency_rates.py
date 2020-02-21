@@ -11,7 +11,8 @@ currency = CurrencyRates()
 currency_symbol = CurrencyCodes().get_symbol(which_currency_to)
 
 currency_converted = currency.convert(which_currency_from, which_currency_to, convert_amount )
+currency_converted = round(currency_converted, 2)
 
-print(currency_symbol + str(currency_converted))
+print(currency_symbol + ' ' + str(currency_converted))
 
 
