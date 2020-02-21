@@ -49,3 +49,22 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1582274067317	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileukPzvO"
+Unable to init server: Broadway display type not supported: 0.0
+Error: cannot open display: 0.0
+1582274639561	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoSp0nb"
+Unable to init server: Broadway display type not supported: 0.0
+Error: cannot open display: 0.0
+1582274729540	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7dL5Ca"
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+1582274730374	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1582274731317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1582274731321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1582274731321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1582274731321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:10463): LIBDBUSMENU-GLIB-WARNING **: 08:45:32.396: Unable to get session bus: Failed to execute child process “dbus-launch” (No such file or directory)
+1582274733705	Marionette	INFO	Listening on port 39913
+1582274733756	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://hapag-lloyd7.azureedge.net/etc/designs/website/js/olb.js, line 682: unreachable code after return statement
