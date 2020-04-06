@@ -12,7 +12,7 @@ import os
 awb_number = '36379350'
 
 adress = 'https://www.turkishcargo.com.tr/en/online-services/shipment-tracking'
-browser = webdriver.Firefox()
+browser = webdriver.Chrome()
 browser.get(adress)
 
 awb_searchfield = browser.find_element_by_css_selector(
